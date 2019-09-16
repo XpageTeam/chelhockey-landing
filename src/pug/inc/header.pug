@@ -8,9 +8,9 @@ header.head-cont
 				
 			nav.main-nav
 				ul.main-nav__list
-					each title in ['Об игре', 'Правила', 'Лучшие участники', 'Призы']
+					each title, i in ['Об игре', 'Правила', 'Лучшие участники', 'Призы']
 						li.main-nav__item
-							a(href="").main-nav__link=title
+							a(href="#"+i+"").main-nav__link=title
 
 			
 			.burger

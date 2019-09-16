@@ -12,6 +12,8 @@
 		img
 			width: 100%
 			display: block
+			object-fit: cover
+			object-position: center
 
 	&__title
 		font-size: em(40)
@@ -46,3 +48,46 @@
 				flex: 1 1 auto
 				justify-content: center
 				width: 100%
+
+
+@media (max-width: 1600px)
+	
+	.main-banner
+		height: auto
+
+		&__title
+			margin-bottom: 35px
+
+		&__btn
+			margin-top: 35px
+
+@media (max-width: 1500px)
+	
+	.main-banner__img
+		img
+			max-height: 100vh 
+
+
+@media (max-width: 1400px)
+
+	.main-banner__title
+		margin-bottom: 25px
+		font-size: 2em
+
+@media (max-width: 1200px)
+
+	.main-banner__img
+		img
+			height: 100vh 
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)
+	.main-banner__img
+		img
+			height: 60vh
+
+
+@media (max-width: 667px)
+	
+	.main-banner__title
+		margin-bottom: 15px
+		font-size: 1.4em

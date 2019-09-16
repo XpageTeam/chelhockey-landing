@@ -51,6 +51,10 @@
 		display: flex
 		justify-content: space-between
 
+		.swiper-button
+			display: none
+
+
 	&__item
 		display: flex
 		flex-direction: column
@@ -85,3 +89,44 @@
 
 			a
 				color: #6DA9F8
+
+@media (max-width: 1600px)
+	
+	.stage
+		&-cont
+			padding: 75px 0
+
+		&__item
+			&-title
+				margin-bottom: 35px
+
+
+@media (max-width: 1500px)
+	
+	.stage
+		&__title
+			margin-bottom: 50px
+
+		&__item
+			&-img
+				margin-bottom: 25px
+
+
+			&-title
+				margin-bottom: 20px
+
+@media (max-width: 1000px)
+	
+	.stage
+
+		.swiper-button
+			display: block
+
+@media (max-width: 667px)
+
+	.stage__title
+		font-size: 1.2rem
+		line-height: 1.4
+
+		&:after, &:before
+			width: 10%

@@ -10,6 +10,7 @@ html(lang="ru")
 		
 		main#content
 			section.main-banner
+				.scroll-down
 				.main-banner__img
 					picture
 						source(srcset="img/photos/banner.jpg" media="screen and (min-width: 660px)" data-main="data-main")
@@ -23,7 +24,9 @@ html(lang="ru")
 							.main-banner__btn
 								a(href="").btn 
 									span Зарегистрироваться
+
 			section.advantages-cont
+				.scroll-down
 				.wrapper
 					.advantages
 						.advantages__slider
@@ -41,37 +44,46 @@ html(lang="ru")
 						.advantages__slider-info
 							.advantages__slider-title Заголовок / ПРЕИМУЩЕСТВА
 							.advantages__slider-text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: постоянный количественный рост и сфера нашей активности требует от нас анализа форм воздействия. Есть над чем задуматься: многие известные личности неоднозначны и будут ограничены исключительно образом мышления.
-			section.stage-cont
+			section.stage-cont#1
+				.scroll-down
 				.wrapper
 					.stage
 						.stage__title 
 							span Как это работает?
 						.stage__list
-							.stage__item
-								.stage__item-img
-									img(src="img/stage-1.svg", alt="")
-								.stage__item-num Шаг 1
-								.stage__item-title Регистрация
-								.stage__item-text Зарегистрируйся в 
-									a(href="") ХоквордГейм 
-									| так как тебе удобно: придумай логин и пароль или используй быстрый вход через соц.сети.
-							.stage__item
-								.stage__item-img
-									img(src="img/stage-2.svg", alt="")
-								.stage__item-num Шаг 2
-								.stage__item-title Соревнуйся и<br> зарабатывай баллы
-								.stage__item-text Участвуй в викторине и правильно отвечай на вопросы. Чем больше правильных ответов ты дашь, тем заработаешь больше баллов и поднимешься в рейтинге!
-							.stage__item
-								.stage__item-img
-									img(src="img/stage-3.svg", alt="")
-								.stage__item-num Шаг 3
-								.stage__item-title Обменивай баллы<br> на подарки от партнеров
-								.stage__item-text Все накопленные баллы можно обменять на подарки от наших партнеров. Подробнее можешь прочитать в своем аккаунте.
+							.swiper-list
+								.swiper-wrapper
+									.swiper-slide
+										.stage__item
+											.stage__item-img
+												img(src="img/stage-1.svg", alt="")
+											.stage__item-num Шаг 1
+											.stage__item-title Регистрация
+											.stage__item-text Зарегистрируйся в 
+												a(href="") ХоквордГейм 
+												| так как тебе удобно: придумай логин и пароль или используй быстрый вход через соц.сети.
+									.swiper-slide
+										.stage__item
+											.stage__item-img
+												img(src="img/stage-2.svg", alt="")
+											.stage__item-num Шаг 2
+											.stage__item-title Соревнуйся и<br> зарабатывай баллы
+											.stage__item-text Участвуй в викторине и правильно отвечай на вопросы. Чем больше правильных ответов ты дашь, тем заработаешь больше баллов и поднимешься в рейтинге!
+									.swiper-slide
+										.stage__item
+											.stage__item-img
+												img(src="img/stage-3.svg", alt="")
+											.stage__item-num Шаг 3
+											.stage__item-title Обменивай баллы<br> на подарки от партнеров
+											.stage__item-text Все накопленные баллы можно обменять на подарки от наших партнеров. Подробнее можешь прочитать в своем аккаунте.
+								.swiper-button.swiper-button-prev
+								.swiper-button.swiper-button-next
  
 
 
 
-			section.player-cont
+			section.player-cont#2
+				.scroll-down
 				.wrapper
 					.player
 						.player__title 
@@ -90,7 +102,7 @@ html(lang="ru")
 												.player__item-text баллов
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
-			section.bonus-cont
+			section.bonus-cont#3
 				.wrapper
 					.bonus
 						.bonus__title 
@@ -118,6 +130,14 @@ html(lang="ru")
 											.bonus__item-text Сделанные на базе интернет-аналитики выводы функционально разнесены на независимые элементы.
 								.swiper-button.swiper-button-prev
 								.swiper-button.swiper-button-next
+			section.reg-cont
+				.wrapper
+					.reg
+						.reg__title Хоккейная викторина
+						.reg__text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: постоянный количественный рост и сфера нашей активности требует от нас анализа форм воздействия. 
+						.reg__btn
+							a(href="").btn Зарегистрироваться
+
 
 
 		include inc/footer.pug

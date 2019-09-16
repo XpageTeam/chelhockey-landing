@@ -1,5 +1,6 @@
 .player
 	&-cont
+		position: relative
 		padding: 110px 0
 
 	&__title
@@ -76,3 +77,35 @@
 			margin-top: 5px
 
 
+@media (max-width: 1600px)
+	
+	.player-cont
+		padding: 75px 0
+
+@media (max-width: 1500px)
+	
+	.player
+		&__title
+			margin-bottom: 50px
+
+		&__item
+			padding: 25px
+
+@media (max-width: 1000px)
+
+	.player__slider 
+		.swiper-button
+			&-prev
+				left: 0
+			&-next
+				right: 0
+
+@media (max-width: 667px)
+	
+	.player__title
+		font-size: 1.2em
+		white-space: normal
+		line-height: 1.4
+
+		&:after, &:before
+			width: 10%

@@ -48,10 +48,26 @@ document.addEventListener("DOMContentLoaded", function(){
 				nextEl: (".player__slider .swiper-button-next")
 			},
 			pagination: {
-			    el: '.swiper-pagination',
+			    el: '.player__slider .swiper-pagination',
 			    type: 'bullets',
 			    clickable: true,
 			},
+			breakpoints: {
+			    // when window width is <= 320px
+			    1200: {
+			      slidesPerView: 4,
+			      spaceBetween: 25
+			    },
+
+			    1000: {
+			      slidesPerView: 3,
+			    },
+
+			    667: {
+			      slidesPerView: 1,
+			    },
+	
+			  }
 		
 			
 		});
@@ -70,6 +86,11 @@ document.addEventListener("DOMContentLoaded", function(){
 			prevEl: (".advantages-cont .swiper-button-prev"),
 			nextEl: (".advantages-cont .swiper-button-next")
 		},
+		pagination: {
+			    el: '.swiper-pagination',
+			    type: 'bullets',
+			    clickable: true,
+			},
 		
 	});
 
@@ -81,7 +102,69 @@ document.addEventListener("DOMContentLoaded", function(){
 			prevEl: (".bonus-cont .swiper-button-prev"),
 			nextEl: (".bonus-cont .swiper-button-next")
 		},
+		breakpoints: {
+		    1000: {
+		      slidesPerView: 2,
+		    },
 
+		    667: {
+		      slidesPerView: 1,
+		    },
+
+		  }
+
+	});
+
+	var stageSwiper = new Swiper('.stage__list .swiper-list', {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		loop: false,
+		navigation: {
+			prevEl: (".stage__list .swiper-button-prev"),
+			nextEl: (".stage__list .swiper-button-next")
+		},
+		breakpointsInverse: true,
+		breakpoints: {
+		    320: {
+		      slidesPerView: 1,
+		    },
+		   
+		    660: {
+		      slidesPerView: 2,
+		    },
+		   
+		    1000: {
+		      slidesPerView: 3,
+		    }
+		}
+
+	});
+
+	// $('.scroll-down').click(function(){
+	// 	var $this = $(this);
+	// 	$this.closest('section').nextAll('section').scrollTop();
+
+	// });
+
+	$("body").on('click', '[href*="#"]', function(e){
+
+		e.preventDefault();
+
+		$('html,body').stop().animate({ 
+			scrollTop: $(this.hash).offset().top
+		}, 1000);
+	});
+
+
+	$("body").on('click', '.scroll-down', function(e){
+
+
+
+		e.preventDefault();
+
+		$('html,body').stop().animate({ 
+			scrollTop: $(this).closest('section').next('section').offset().top
+		}, 1000);
 	});
 
 
