@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		
+		main#content
+			section.main-banner
+				.main-banner__img
+					picture
+						source(srcset="img/photos/banner.jpg" media="screen and (min-width: 660px)" data-main="data-main")
+						source(srcset="img/photos/banner-mobile.jpg" media="screen and (max-width: 660px)")
+						img
+				.main-banner__info-cont
+					.wrapper
+						.main-banner__info
+							.main-banner__title хоккейная викторина
+							.main-banner__text Консультация с широким активом играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных решений.Консультация с широким активом играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных решений.
+							.main-banner__btn
+								a(href="").btn Зарегистрироваться
+			section.advantages-cont
+				.wrapper
+					.advantages
+						.advantages__slider
+							.advantages__slider-slider
+								.swiper-list
+									.swiper-wrapper
+										- for (let i = 0; i < 5; i++)
+											.swiper-slide
+												.advantages__slider-img
+							.advantages__slider-info
+								.advantages__slider-title Заголовок / ПРЕИМУЩЕСТВА
+								.advantages__slider-text Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: постоянный количественный рост и сфера нашей активности требует от нас анализа форм воздействия. Есть над чем задуматься: многие известные личности неоднозначны и будут ограничены исключительно образом мышления.
+			section.stage-cont
+				.wrapper
+					.stage
+						.stage__title как это работает?
+						.stage__list
+							.stage__item
+								.stage__item-img
+									img(src="img/stage-1.png", alt="")
+								.stage__item-num Шаг 1
+								.stage__item-title Регистрация
+								.stage__item-text Зарегистрируйся в
+									a(href="") ХоквордГейм
+									| так как тебе удобно: придумай логин и пароль или используй быстрый вход через соц.сети.
+							.stage__item
+								.stage__item-img
+									img(src="img/stage-2.png", alt="")
+								.stage__item-num Шаг 2
+								.stage__item-title Соревнуйся и зарабатывай баллы
+								.stage__item-text Участвуй в викторине и правильно отвечай на вопросы. Чем больше правильных ответов ты дашь, тем заработаешь больше баллов и поднимешься в рейтинге!
+							.stage__item
+								.stage__item-img
+									img(src="img/stage-3.png", alt="")
+								.stage__item-num Шаг 3
+								.stage__item-title Обменивай баллы на подарки от партнеров
+								.stage__item-text Все накопленные баллы можно обменять на подарки от наших партнеров. Подробнее можешь прочитать в своем аккаунте.
+ 
+
+
+
+			section.player-cont
+				.wrapper
+					.player
+						.player__title Лучшие знатоки хоккея
+						.player__slider
+							.swiper-wrapper
+								- for (let i = 0; i < 6; i++)
+									.swiper-slide
+										.player__item
+											figure.player__item-img
+												img(src="img/player.jpg", alt="")
+												.label--top 
+											.player__item-name Сергеенко Сергей
+											.player__item-score 3569 
+											.player__item-text баллов
+			section.bonus-cont
+				.wrapper
+					.bonus
+						.bonus__title призы от партнеров за баллы
+						.bonus__slider
+							.swiper-wrapper
+								.swiper-slide
+									.bonus__item
+										figure.bonus__item-img
+											img(src="img/bonus-1.jpg", alt="")
+										.bonus__item-title Ноутбук Apple MacBook Air 13 
+										.player__item-text Сделанные на базе интернет-аналитики выводы функционально разнесены на независимые элементы.
+								.swiper-slide
+									.bonus__item
+										figure.bonus__item-img
+											img(src="img/bonus-2.jpg", alt="")
+										.bonus__item-title Часы Apple Watch Series 4
+										.player__item-text Сделанные на базе интернет-аналитики выводы функционально разнесены на независимые элементы.
+								.swiper-slide
+									.bonus__item
+										figure.bonus__item-img
+											img(src="img/bonus-3.jpg", alt="")
+										.bonus__item-title Наушники Apple Airpods
+										.player__item-text Сделанные на базе интернет-аналитики выводы функционально разнесены на независимые элементы.
+
+
+
+	
+		include inc/footer.pug
+		include inc/scripts.pug

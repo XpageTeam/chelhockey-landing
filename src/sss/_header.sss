@@ -1,0 +1,54 @@
+.head
+	display: flex
+	padding: 60px 0
+
+	&-cont
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+
+
+.main-nav
+	margin-left: auto
+
+	&__list
+		display: flex
+
+	&__item
+
+		&:not(:last-child)
+			margin-right: 100px
+
+		// &.active, &:hover
+		// 	.main-nav__link
+		// 		&:after
+		// 			opacity: 1
+
+	&__link
+		position: relative
+		color: #fff
+		font-weight: 500
+		padding: 20px 0
+		line-height: 1
+		font-size: em(18)
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: calc(100% - -22px)
+			height: 3px
+			width: 100%
+			background-color: var(--main-color)
+			opacity: 0
+			transition: opacity .3s ease
+			border-radius: 5px
+
+
+
+
+
+
+
+
