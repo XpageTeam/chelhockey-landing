@@ -1,9 +1,6 @@
 import $ from "jquery"
 // import is from "is_js"
-// import stringEffect from "./stringAnimate.js"
-import "./faq.js"
 import "./mobile-menu.js"
-import "./lc.js"
 
 
 
@@ -42,21 +39,50 @@ require("../css/jquery.fancybox.css")
 document.addEventListener("DOMContentLoaded", function(){
 
 
-	var contactsSwiper = new Swiper('.contacts__slider .swiper-list', {
-			slidesPerView: 1,
+	var advantagesSwiper = new Swiper('.player__slider .swiper-list', {
+			slidesPerView: 5,
 			spaceBetween: 40,
-			// loop: true,
+			loop: true,
 			navigation: {
-				prevEl: (".contacts__slider-cont .swiper-button-prev"),
-				nextEl: (".contacts__slider-cont .swiper-button-next")
+				prevEl: (".player__slider .swiper-button-prev"),
+				nextEl: (".player__slider .swiper-button-next")
 			},
 			pagination: {
 			    el: '.swiper-pagination',
 			    type: 'bullets',
 			    clickable: true,
-			  },
+			},
+		
 			
 		});
+
+	$('.stage__item-title').height(Math.max.apply(null, $('.stage__item-title').map(function(){
+		return $(this).height();
+	})))
+
+
+	var playerSwiper = new Swiper('.advantages__slider-slider .swiper-list', {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		effect: "fade",
+		loop: true,
+		navigation: {
+			prevEl: (".advantages-cont .swiper-button-prev"),
+			nextEl: (".advantages-cont .swiper-button-next")
+		},
+		
+	});
+
+	var bonusSwiper = new Swiper('.bonus__slider .swiper-list', {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		loop: true,
+		navigation: {
+			prevEl: (".bonus-cont .swiper-button-prev"),
+			nextEl: (".bonus-cont .swiper-button-next")
+		},
+
+	});
 
 
 
@@ -297,12 +323,6 @@ $(window).on("load", e => {
 	
 	$video[0].play();
 
-	// let video = document.querySelector("video");
-	// let canvas = document.querySelector("canvas");
-	// let ctx = canvas.getContext("2d");
-	// ctx.drawImage(video, 0, 0, width, height);
- //  	let screen = this.ctx1.getImageData(0, 0, this.width, this.height);
- //  	console.log(screen)
 		
 
 });
