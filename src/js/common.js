@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 			    667: {
 			      slidesPerView: 1,
+			      autoHeight: true,
 			    },
 	
 			  }
@@ -72,9 +73,13 @@ document.addEventListener("DOMContentLoaded", function(){
 			
 		});
 
-	$('.stage__item-title').height(Math.max.apply(null, $('.stage__item-title').map(function(){
-		return $(this).height();
-	})))
+	if($(window).width() > 670){
+		$('.stage__item-title').height(Math.max.apply(null, $('.stage__item-title').map(function(){
+			return $(this).height();
+		})))
+		
+	}
+
 
 
 	var playerSwiper = new Swiper('.advantages__slider-slider .swiper-list', {
@@ -109,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		    667: {
 		      slidesPerView: 1,
+		      autoHeight: true,
 		    },
 
 		  }
@@ -127,10 +133,12 @@ document.addEventListener("DOMContentLoaded", function(){
 		breakpoints: {
 		    320: {
 		      slidesPerView: 1,
+		      autoHeight: true,
 		    },
 		   
 		    660: {
 		      slidesPerView: 2,
+
 		    },
 		   
 		    1000: {
